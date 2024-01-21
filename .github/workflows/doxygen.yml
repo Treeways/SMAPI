@@ -20,8 +20,10 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
       
     steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v4
         - name: Create Working Directory
-          run: ls
+          run: mkdir ./docs/out
         - name: Generate Documentation
           uses: mattnotmitt/doxygen-action@1.9.5
           with:
