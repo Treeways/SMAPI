@@ -23,15 +23,15 @@ jobs:
         - name: Checkout Repository
           uses: actions/checkout@v4
         - name: Create Working Directory
-          run: mkdir ./docs/out
+          run: mkdir /docs/out
         - name: Generate Documentation
           uses: mattnotmitt/doxygen-action@1.9.5
           with:
-            doxyfile-path: ./docs/Doxyfile
-            working-directory: ./docs/out
+            doxyfile-path: /docs/Doxyfile
+            working-directory: /docs/out
         - name: Deploy on GitHub Pages
           uses: peaceiris/actions-gh-pages@v3
           # if: github.ref == 'refs/heads/stable'
           with:
               github_token: ${{ secrets.GITHUB_TOKEN }}
-              publish_dir: ./docs/out
+              publish_dir: /docs/out
