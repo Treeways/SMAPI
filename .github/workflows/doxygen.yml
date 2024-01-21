@@ -24,6 +24,8 @@ jobs:
           uses: actions/checkout@v4
         - name: Create Working Directory
           run: mkdir docs/out
+        - name: LS Docs/
+          run: ls docs/
         - name: Generate Documentation
           uses: mattnotmitt/doxygen-action@1.9.5
           with:
