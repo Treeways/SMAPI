@@ -21,7 +21,7 @@ jobs:
       
     steps:
         - name: Create Working Directory
-          run: mkdir ./docs/out
+          run: ls
         - name: Generate Documentation
           uses: mattnotmitt/doxygen-action@1.9.5
           with:
