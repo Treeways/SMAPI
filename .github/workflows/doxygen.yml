@@ -29,7 +29,7 @@ jobs:
         - name: Generate Documentation
           uses: mattnotmitt/doxygen-action@1.9.5
           with:
-            doxyfile-path: docs/Doxyfile
+            doxyfile-path: ../Doxyfile
             working-directory: docs/out
         - name: Deploy on GitHub Pages
           uses: peaceiris/actions-gh-pages@v3
